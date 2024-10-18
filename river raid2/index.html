@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Raid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #87ceeb;
+            color: white;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid #fff;
+            display: block;
+            margin: 0 auto;
+            background-color: #87ceeb;
+        }
+
+        #gameOverScreen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>River Raid</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="hud">
+        <p>Combustível: <span id="fuel">100</span>%</p>
+        <p>Pontuação: <span id="score">0</span></p>
+        <p>Vidas: <span id="lives">3</span></p>
+        <p>Fase: <span id="level">1</span></p>
+    </div>
+    <div id="gameOverScreen">
+        <h2>Fim de Jogo!</h2>
+        <p>Pontuação Final: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Reiniciar</button>
+    </div>
+    <!-- Inclui o arquivo JavaScript externo -->
+    <script src="game.js"></script>
+</body>
+</html>
